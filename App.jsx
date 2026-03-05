@@ -1,32 +1,30 @@
-import Myapp from "./components/myapp"
-import First from "./components/first"
-function App() {
-  
+import "bootstrap/dist/css/bootstrap.min.css";
 
-  return <center>
-    <Myapp></Myapp>
-    <First></First>
-      <First></First>
-        <First></First>
-    
-   
 
-    <div class="container text-center">
-  <div class="row">
-    <div class="col-6">
-   buy milk
-    </div>
-    <div class="col-4">
-      4/10/2023
-    </div>
-    <div class="col-2">
-      <button type="button" class="btn btn-danger">Delete</button>
-    </div>
-  </div>
-</div>
-  </center>
-  
-  
+
+function App(){
+  // let fooditems =[ "Dall" , "Green Veg" , "fish" , "roti" , "salad"];
+    let fooditems =[ ];
+    // let foodies = fooditems.length === 0 ? <h3>I AM HUNGARY</h3> : null;
+  return ( 
+    <>
+    <h1>Food Items</h1>
+    {fooditems.length === 0 && <h3>I AM HUNGARY</h3>};
+    <ul className="list-group list-group-flush">
+      {fooditems.map((item =>(
+ <li key={item} className="list-group-item">{item}</li>
+ 
+      )))}
+ 
+ Terminal React
+npm create vite@latest
+npm run dev
+npm install
+import "bootstrap/dist/css/bootstrap.min.css";
+npm i bootstrap@5.3.8
+ 
+</ul>
+  </>
+  )
 }
-
-export default App
+export default App;
